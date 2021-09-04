@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap')
+
+$green: hsl(163, 72%, 41%)
+$red: hsl(356, 69%, 56%)
+
+$fb: hsl(208, 92%, 53%)
+$twitter: hsl(203, 89%, 53%)
+$instagram: linear-gradient(130deg, rgba(253,196,104,1) 0%, rgba(223,73,150,1) 100%)
+$youtube: hsl(348, 97%, 39%)
+
+$toggle-dark: linear-gradient(90deg, rgba(55,143,230,1) 0%, rgba(62,218,130,1) 100%)
+$toggle-light: hsl(230, 22%, 74%)
+
+.theme-light
+    --background: hsl(0, 0%, 100%)
+    --background-top: hsl(225, 100%, 98%)
+    --card-background: hsl(227, 47%, 96%)
+    --small-text: hsl(228, 12%, 44%)
+    --dark-color: hsl(230, 17%, 14%)
+    --hover: rgba(174, 179, 203,0.4)
+.theme-dark
+    --background: hsl(230, 17%, 14%)
+    --background-top: hsl(232, 19%, 15%)
+    --card-background: hsl(228, 28%, 20%)
+    --small-text: hsl(228, 34%, 66%)
+    --dark-color: hsl(0, 0%, 100%)
+    --hover: rgba(109, 120, 171,0.2)
+
+*
+    margin: 0
+    box-sizing: border-box
+    padding: 0
+
+body
+    font-family: 'Inter', sans-serif
+    background: var(--background)
+
+.header-bg
+    background: var(--background-top)
+    height: 250px
+    z-index: 0
+.header
+    width: 70%
+    margin: 0 auto
+    padding-top: 35px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    h1
+        color: var(--dark-color)
+    h5
+        color: var(--small-text)
+        font-size: 14px
+        font-weight: 700
+        padding-top: 5px
+
+.wrapper
+    margin: 0 auto
+    width: 70%
+.social
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    z-index: 1
+    position: relative
+    top: -90px
+.cards
+    background: var(--card-background)
+    width: 230px
+    border-radius: 5px
+    cursor: pointer
+    &:hover
+        background: var(--hover)
+.fb
+    border-top: 4px solid $fb
+.twitter
+    border-top: 4px solid $twitter
+.insta
+    background-image: linear-gradient(var(--card-background)), linear-gradient(to right, #fdc468, #df4996)
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--card-background))), -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996))
+    /* border-top: 4px solid transparent*/
+    background-clip: padding-box, border-box
+    background-origin: border-box
+    border-top: 4px solid transparent
+    border-image: linear-gradient(to right, #fdc468, #df4996) 1 stretch
+
+.youtube
+    border-top: 4px solid $youtube
+.row
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 25px
+
+.big-cards
+    height: 180px
+    padding: 15px 30px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.name
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding-bottom: 10px
+    font-size: 11px
+    font-weight: 700
+    color: var(--small-text)
+    img
+        padding-right: 10px
+
+.follower-num
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: 20px
+.number
+    font-size: 40px
+    font-weight: 700
+    color: var(--dark-color)
+.followers
+    text-transform: uppercase
+    color: var(--small-text)
+    letter-spacing: 3px
+    font-size: 12px
+.today
+    display: flex
+    flex-direction: row
+    align-items: center
+    font-weight: 700
+    font-size: 11px
+.green
+    color: $green
+
+.red
+    color: $red
+
+.overview
+    position: relative
+    top: -50px
+
+.heading, .overview-data
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.heading
+    padding-bottom: 10px
+    align-items: center
+.overview-data
+    align-items: baseline
+.heading p
+    color: var(--small-text)
+    font-size: 14px
+    font-weight: 700
+
+.overview-num
+    font-size: 30px
+    color: var(--dark-color)
+    font-weight: 700
+.small-cards
+    height: 100px
+    padding: 15px 25px
+
+h2
+    color: var(--small-text)
+    padding: 0 0 20px 0
+
+.toggle
+    display: flex
+    flex-direction: row
+    align-items: center
+    p
+        padding-right: 10px
+        font-weight: 700
+        font-size: 16px
+        color: $toggle-light
+
+//SWITCH
+.switch
+    position: relative
+    display: inline-block
+    width: 63px
+    height: 30px
+    input
+        opacity: 0
+        width: 0
+        height: 0
+.slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $toggle-light
+    -webkit-transition: .4s
+    transition: .4s
+    &:hover
+        background-image: $toggle-dark
+    &:before
+        position: absolute
+        content: ""
+        height: 23px
+        width: 23px
+        cursor: pointer
+        right: 4px
+        bottom: 4px
+        background-color: var(--background-top)
+        -webkit-transition: .4s
+        transition: .4s
+input:checked + .slider
+    background-image: $toggle-dark
+
+input:focus + .slider
+    box-shadow: 0 0 1px $toggle-dark
+
+input:checked + .slider:before
+    -webkit-transform: translateX(-32px)
+    -ms-transform: translateX(-32px)
+    transform: translateX(-32px)
+    background-color: var(--background-top)
+
+.slider.round
+    border-radius: 34px
+    &:before
+        border-radius: 50%
+
+.attribution
+    color: var(--dark-color)
+    text-align: center
+    font-size: 12px
+    a
+        color: $fb
+        text-decoration: none
