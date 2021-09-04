@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Theme switcher</title>
+  </head>
+  <body>
+    <section class="header-bg">
+      <div class="header">
+        <div class="title">
+          <h1>Social Media Dashboard</h1>
+          <h5>Total Followers: 23,004</h5>
+        </div>
+
+        <div class="toggle">
+          <p>Dark Mode</p>
+          <label class="switch">
+            <input type="checkbox" onclick="toggleTheme()" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </section>
+    <div class="wrapper">
+      <section class="social">
+        <div class="cards big-cards fb">
+          <div class="name">
+            <img src="./images/icon-facebook.svg" alt="facebook icon" />
+            <p>@nathanf</p>
+          </div>
+          <div class="follower-num">
+            <p class="number">1987</p>
+            <p class="followers">Followers</p>
+          </div>
+          <div class="today">
+            <img src="./images/icon-up.svg" alt="arrow up" />
+            <p class="today-text green">12 Today</p>
+          </div>
+        </div>
+        <div class="cards big-cards twitter">
+          <div class="name">
+            <img src="./images/icon-twitter.svg" alt="twitter icon" />
+            <p>@nathanf</p>
+          </div>
+          <div class="follower-num">
+            <p class="number">1044</p>
+            <p class="followers">Followers</p>
+          </div>
+          <div class="today">
+            <img src="./images/icon-up.svg" alt="arrow up" />
+            <p class="today-text green">99 Today</p>
+          </div>
+        </div>
+        <div class="cards big-cards insta">
+          <div class="name">
+            <img src="./images/icon-instagram.svg" alt="instagram icon" />
+            <p>@realnathanf</p>
+          </div>
+          <div class="follower-num">
+            <p class="number">11k</p>
+            <p class="followers">Followers</p>
+          </div>
+          <div class="today">
+            <img src="./images/icon-up.svg" alt="arrow up" />
+            <p class="today-text green">1099 Today</p>
+          </div>
+        </div>
+        <div class="cards big-cards youtube">
+          <div class="name">
+            <img src="./images/icon-youtube.svg" alt="youtube icon" />
+            <p>Nathan F.</p>
+          </div>
+          <div class="follower-num">
+            <p class="number">8239</p>
+            <p class="followers">Subscribers</p>
+          </div>
+          <div class="today">
+            <img src="./images/icon-down.svg" alt="arrow down" />
+            <p class="today-text red">144 Today</p>
+          </div>
+        </div>
+      </section>
+      <section class="overview">
+        <h2>Overview - Today</h2>
+        <div class="row">
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Page Views</p>
+              <img src="./images/icon-facebook.svg" alt="facebook icon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">87</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="arrow up" />
+                <p class="today-text green">3%</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Likes</p>
+              <img src="./images/icon-facebook.svg" alt="facebook icon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">52</p>
+              <div class="today">
+                <img src="./images/icon-down.svg" alt="arrow down" />
+                <p class="today-text red">2%</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Likes</p>
+              <img src="./images/icon-instagram.svg" alt="instagram icon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">5462</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="arrow up" />
+                <p class="today-text green">2257%</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Profile Views</p>
+              <img src="./images/icon-instagram.svg" alt="instagram icon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">52k</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="arrow up" />
+                <p class="today-text green">1375%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Retweets</p>
+              <img src="./images/icon-twitter.svg" alt="twittericon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">117</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="arrow up" />
+                <p class="today-text green">303%</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Likes</p>
+              <img src="./images/icon-twitter.svg" alt="twittericon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">507</p>
+              <div class="today">
+                <img src="./images/icon-up.svg" alt="arrow up" />
+                <p class="today-text green">553%</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Likes</p>
+              <img src="./images/icon-youtube.svg" alt="youtube icon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">107</p>
+              <div class="today">
+                <img src="./images/icon-down.svg" alt="arrow down" />
+                <p class="today-text red">19%</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards small-cards">
+            <div class="heading">
+              <p>Total Views</p>
+              <img src="./images/icon-youtube.svg" alt="youtube icon" />
+            </div>
+            <div class="overview-data">
+              <p class="overview-num">1407</p>
+              <div class="today">
+                <img src="./images/icon-down.svg" alt="arrow down" />
+                <p class="today-text red">12%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">LaraP</a>.
+    </section>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
